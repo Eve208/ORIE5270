@@ -1,0 +1,16 @@
+08/21/2018
+What we covered and why does that matter?
+1. AWS: prof gave a brief introduction of AWS and went through the process of launching an EC2 instance. 
+   AWS provides the flexibility to work remotely and gives people access to more powerful computers without physically owning the hardware. 
+
+2. Linux: covered some basic and useful Linux commands
+   Linux is flexible enough to allow users write and run different programming languages, and some scripts run faster in Linux.  
+
+3. Vim: covered how to write, save, and make changes to a file
+   Vim is a handy text editor in Linux, and it gives an easier way to modify codes
+
+4. Git: covered how to create a new repository; add, commit and push a new file to the repository; add and merge a new branch to make changes to a file  
+   Git is a version control system that allows people to keep track of their projects efficiently.
+
+5. Unit Shell: very brief introduction on writing and interpreting shell scripts
+   Shell allows users to save and re-use scripts and thus increases efficiency.
