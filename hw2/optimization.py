@@ -7,7 +7,7 @@ def rosen(X):
     :param x: array
     :return: value of the function
     """
-    return (1.0 - X[0])**2 + 100.0 * (X[1] - X[0]**2)**2 +           (1.0 - X[1])**2 + 100.0 * (X[2] - X[1]**2)**2
+    return (1.0 - X[0])**2 + 100.0 * (X[1] - X[0]**2)**2 + (1.0 - X[1])**2 + 100.0 * (X[2] - X[1]**2)**2
 
 if __name__ == '__main__':
     
