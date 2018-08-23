@@ -3,7 +3,7 @@ import numpy as np
 
 def rosen(X):
     """
-    Define the Rosenbrock function
+    Define Rosenbrock function with n = 3
     :param x: array
     :return: value of the function
     """
