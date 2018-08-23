@@ -4,36 +4,47 @@ class Tree(object):
         self.root = root
 
     def get_value_root(self):
+        """
+        :return: (int) value of the root
+        """
         if self.root is not None:
             return self.root.value
         else:
             return None
 
-# return the depth of tree
     def getDepth(self, root):
+        """
+        :param root: (Node)
+        :return: (int) the depth of the tree
+        """
         if root is None or not(isinstance(root,Node)) or (root.left is None and root.right is None):
             return 1
         return max(self.getDepth(root.left), self.getDepth(root.right)) + 1
 
-# return the positions of nodes in list of lists
-# param root: node
-# param tree_struc: list of lists
-# param row: int
-# param col: int
+
     def nodePos(self, root, tree_struc, row, col):
+        """
+        :param root: (Node)
+        :param tree_struc: (list of lists)
+        :param row: (int)
+        :param col: (int)
+        :return: (list of lists) contains all the nodes
+        """
         if isinstance(root, Node):
-            tree_struc[-row -1][col] = root.value
+            tree_struc[-(row+1)][col] = root.value
             if root.left:
                 self.nodePos(root.left, tree_struc, row - 1, col - 2 ** (row - 1))
             if root.right:
                 self.nodePos(root.right, tree_struc, row - 1, col + 2 ** (row - 1))
         else:
-            tree_struc[-row -1][col] = root
+            tree_struc[-(row+1)][col] = root
            
         return tree_struc
 
-# return the list of lists
     def printTree(self):
+        """
+        :return: (list of list) tree with empty spaces represented by '|'
+        """
         d = self.getDepth(self.root)
         if d ==1:
             tree_struc = ['|', self.get_value_root(), '|' ]
@@ -50,4 +61,3 @@ class Node(object):
         self.value = value
         self.left = left
         self.right = right
-
