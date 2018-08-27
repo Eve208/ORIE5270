@@ -60,7 +60,6 @@ def find_negative_cycles(text_file):
             for neighbour in graph[node]:
                 if dist[neighbour] > dist[node] + graph[node][neighbour]:
                     neg_cycle = [node]
-                    #start = node
                     prev_path = prev[node]
                     while start != back and back:
                         neg_cycle.append(prev_path)
