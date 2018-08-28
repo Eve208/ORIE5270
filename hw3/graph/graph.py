@@ -47,7 +47,7 @@ def find_negative_cycles(text_file):
             dist[node] = float("inf")
             prev[node] = None
 
-        d[source] = 0
+        dist[source] = 0
 
         for i in range(num_node - 1):
             for node in graph:
@@ -61,11 +61,11 @@ def find_negative_cycles(text_file):
                 if dist[neighbour] > dist[node] + graph[node][neighbour]:
                     neg_cycle = [node]
                     prev_path = prev[node]
-                    while start != back and back:
+                    while node != prev_path and prev_path:
                         neg_cycle.append(prev_path)
                         prev_path = prev[prev_path]
                     neg_cycle.append(prev_path)
-                    return reversed(neg_cycle)
+                    return (neg_cycle[::-1])
     return None
 
 def getGraph(text_file):
