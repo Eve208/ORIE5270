@@ -9,7 +9,7 @@ class TestPrintTree(unittest.TestCase):
         self.answer1 = ["|",1,"|"]
         self.assertEqual(self.print1,self.answer1)
         
-        def test_tree2(self):
+    def test_tree2(self):
         node1 = Node(1, None, None)
         node2 = Node(2, None, None)
         node3 = Node(3, None, None)
