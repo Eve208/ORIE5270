@@ -19,10 +19,12 @@ def mat_mult_vec(matrix_file,vector_file):
     return result
 
 def matCol(l):
+    # generate (j,(i,val)) tuple
     for i in l[1]:
         yield(i[1], (l[0], i[0]))
 
 def addVecInd(l):
+     # add vevtor index
     for i in range(len(l)):
         yield(i, l[i])
 
